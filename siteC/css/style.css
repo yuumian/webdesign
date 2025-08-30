@@ -1,0 +1,246 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+#wrap {
+  position: relative;
+  width: 1000px;
+  display: flex;
+}
+#aside {
+  width: 200px;
+  background-color: #cbb6e7;
+}
+#aside .logo {
+  width: 200px;
+  height: 100px;
+}
+#aside .logo a {
+  font-size: 26px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+#aside .nav {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 550px;
+}
+#aside .nav > ul > li {
+  position: relative;
+}
+#aside .nav > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #7309fd;
+  color: #fff;
+  box-sizing: border-box;
+}
+#aside .nav > ul > li > a:hover {
+  background-color: #994bff;
+}
+#aside .nav > ul > li > ul {
+  display: none;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  width: 200px;
+}
+#aside .nav > ul > li > ul > li > a {
+  padding: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+}
+#aside .nav > ul > li > ul > li > a:hover {
+  background-color: #994bff;
+  color: #fff;
+}
+#main {
+  width: 800px;
+}
+#slider {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+#slider .sliderWrap {
+  overflow: hidden;
+}
+#slider .sliderWrap .slider {
+  position: relative;
+  height: 350px;
+}
+#slider .sliderWrap .slider a {
+  display: block;
+}
+#slider .sliderWrap .slider .text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+}
+#slider .sliderWrap .slider .text h2 {
+  color: #fff;
+  font-size: 30px;
+}
+#slider .sliderWrap .slider .text h2 em {
+  color: #7309fd;
+  font-style: normal;
+}
+#slider .sliderWrap .slider .text p {
+  color: #fff;
+}
+#contents {
+  width: 100%;
+  display: flex;
+}
+#contents .notice {
+  width: 300px;
+  height: 200px;
+  background-color: #d2b3d8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#contents .notice h3 {
+  margin-bottom: 10px;
+}
+#contents .notice li {
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#contents .notice li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 10px;
+}
+#contents .notice li a:hover {
+  text-decoration: underline;
+}
+#contents .gallery {
+  width: 300px;
+  height: 200px;
+  background-color: #b893ab;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#contents .gallery h3 {
+  margin-bottom: 10px;
+}
+#contents .gallery ul {
+  display: flex;
+}
+#contents .gallery li {
+  margin-right: 10px;
+}
+#contents .gallery li img {
+  width: 80px;
+}
+#contents .gallery li a {
+  display: block;
+}
+#contents .gallery li a:hover img {
+  opacity: 0.7;
+}
+#contents .link {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images//banner.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#contents .link h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#contents .link a {
+  background-color: #7a2afc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+#contents .link a:hover {
+  background-color: #a168fc;
+}
+#footer {
+  width: 100%;
+  display: flex;
+  background-color: #c3afdb;
+  align-items: center;
+  height: 100px;
+}
+#footer .footer1 {
+  width: 200px;
+  text-align: center;
+}
+#footer .footer1 h4{
+  font-size: 20px;
+  color: #222222;
+}
+#footer .footer2 {
+  width: 400px;
+}
+#footer .footer3 {
+  width: 200px;
+}
+#footer .footer3 select{
+  width: 90%;
+  height: 30px;
+}
+.popup-view{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: #e2d0fa;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 4px solid #7309fd;
+  display: none;
+}
+.popup-view h3{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.popup-close {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #7309fd;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
