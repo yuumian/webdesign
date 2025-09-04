@@ -73,13 +73,100 @@
         height: 50px;
         background-color: #9d9d9d;
       }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .nav > ul {
+        display: flex;
+        justify-content: right;
+        margin-top: 30px;
+      }
+      .nav > ul > li {
+        position: relative;
+      }
+      .nav > ul > li > a {
+        padding: 10px 50px;
+        display: inline-block;
+        background-color: #797979;
+      }
+      .nav > ul > li > a:hover {
+        background-color: #686868;
+      }
+      .nav > ul > li > ul{
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 45px;
+        width: 100%;
+        display: none;
+      }
+      .nav > ul > li > ul > li > a{
+        padding: 10px;
+        display: inline-block;
+        background-color: #c1c1c1;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .nav > ul > li > ul > li > a:hover{
+        background-color: #b4b4b4;
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".nav > ul > li").mouseover(function(){
+          $(this).find(".submenu").stop().slideDown(200);
+        })
+        $(".nav > ul > li").mouseout(function(){
+          $(this).find(".submenu").stop().slideUp(200);
+        })
+      })
+    </script>
   </head>
   <body>
     <div id="wrap">
       <header id="header">
         <h1 class="logo"></h1>
-        <nav class="nav"></nav>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">메뉴1</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
       <!-- //header -->
       <article id="slider"></article>

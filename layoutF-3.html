@@ -79,31 +79,141 @@
         height: 60px;
         background-color: #838383;
       }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      li {
+        list-style: none;
+      }
+      #slider::after {
+        top: 0;
+        left: 0;
+        content: "";
+        background-color: #adadad;
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+      #slider.on::after {
+        height: 175px;
+      }
+      .nav {
+        position: relative;
+        z-index: 2;
+      }
+      .nav > ul {
+        justify-content: right;
+        display: flex;
+        margin-top: 57px;
+      }
+      .nav > ul > li {
+        position: relative;
+      }
+      .nav > ul > li > a {
+        display: inline-block;
+        padding: 10px 50px;
+        background-color: #838383;
+      }
+      .nav > ul > li > a:hover {
+        background-color: #7a7a7a;
+      }
+      .nav > ul > li > ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 43px;
+        width: 100%;
+        text-align: center;
+      }
+      .nav > ul > li > ul > li > a {
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .nav > ul > li > ul > li > a:hover {
+        background-color: #646464;
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".nav > ul > li").mouseover(function () {
+          $(".nav > ul > li > ul").stop().fadeIn(200);
+          $("#slider").addClass("on");
+        });
+        $(".nav > ul > li").mouseout(function () {
+          $(".nav > ul > li > ul").stop().fadeOut(200);
+          $("#slider").removeClass("on");
+        });
+      });
+    </script>
   </head>
   <body>
-    <div id="wrap"></div>
-    <header id="header">
-      <h1 class="logo"></h1>
-      <nav class="nav"></nav>
-    </header>
-    <!-- //header -->
-    <article id="slider">
-      <div class="link"></div>
-    </article>
-    <!-- //slider -->
-    <section id="contents">
-      <article class="banner"></article>
-      <section class="notice"></section>
-    </section>
-    <!-- //contents  -->
-    <footer id="footer">
-      <div class="footer1"></div>
-      <div class="footer2">
-        <div class="footer2-1"></div>
-        <div class="footer2-2"></div>
-      </div>
-    </footer>
-    <!-- //footer  -->
+    <div id="wrap">
+      <header id="header">
+        <h1 class="logo"></h1>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">메뉴1</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+                <li><a href="#">서브메뉴2-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+                <li><a href="#">서브메뉴3-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+                <li><a href="#">서브메뉴4-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- //header -->
+      <article id="slider">
+        <div class="link"></div>
+      </article>
+      <!-- //slider -->
+      <section id="contents">
+        <article class="banner"></article>
+        <section class="notice"></section>
+      </section>
+      <!-- //contents  -->
+      <footer id="footer">
+        <div class="footer1"></div>
+        <div class="footer2">
+          <div class="footer2-1"></div>
+          <div class="footer2-2"></div>
+        </div>
+      </footer>
+      <!-- //footer  -->
+    </div>
   </body>
 </html>

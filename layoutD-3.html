@@ -77,13 +77,123 @@
         height: 60px;
         background-color: #9d9d9d;
       }
+      #main::after {
+        content: "";
+        width: 0;
+        height: 217px;
+        background-color: #747474;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        z-index: 1;
+        transition: all 300ms;
+      }
+      #main.on::after {
+        width: 100%;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      .nav {
+        position: relative;
+        z-index: 2;
+      }
+      .nav > ul > li{
+        position: relative;
+      }
+      .nav > ul > li > a{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        background-color: #535353;
+      }
+      .nav > ul > li > a:hover{
+        background-color: #444444;
+      }
+      .nav > ul > li > ul{
+        position: absolute;
+        top: 0;
+        right: -500px;
+        width: 500px;
+        display: none;
+      }
+      .nav > ul > li > ul > li{
+        display: inline;
+      }
+      .nav > ul > li > ul > li > a{
+        display: inline-block;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+      }
+      .nav > ul > li > ul > li > a:hover{
+        background-color: #9c9c9c;
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".nav > ul > li").mouseover(function(){
+          $(".nav > ul > li > ul").stop().fadeIn(200);
+          $("#main").addClass("on");
+        })
+        $(".nav > ul > li").mouseout(function(){
+          $(".nav > ul > li > ul").stop().fadeOut(200);
+          $("#main").removeClass("on");
+        })
+      })
+    </script>
   </head>
   <body>
     <div id="wrap">
       <aside id="aside">
         <h1 class="logo"></h1>
-        <nav class="nav"></nav>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">메뉴1</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴5</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴5-1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </aside>
       <!-- //aside -->
       <main id="main">

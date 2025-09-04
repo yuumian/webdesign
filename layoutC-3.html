@@ -14,7 +14,7 @@
         display: flex;
       }
       #aside {
-        width: 20%;
+        width: 200px;
       }
       #aside h1 {
         width: 100%;
@@ -27,7 +27,7 @@
         background-color: #d9d9d9;
       }
       #main {
-        width: 80%;
+        width: 800px;
       }
       #slider {
         width: 100%;
@@ -76,13 +76,98 @@
         height: 50px;
         background-color: #838383;
       }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      li {
+        list-style: none;
+      }
+      nav > ul > li{
+        position: relative;
+      }
+      nav > ul > li > a{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        background-color: #4b4b4b;
+      }
+      nav > ul > li > a:hover{
+        background-color: #383838;
+      }
+      nav > ul > li > ul{
+        position: absolute;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        display: none;
+      }
+      nav > ul > li > ul > li > a{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        background-color: #a7a7a7;
+      }
+      nav > ul > li > ul > li > a:hover{
+        background-color: #888888;
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("nav > ul > li").mouseover(function(){
+          $(this).find(".submenu").stop().slideDown(200);
+        })
+        $("nav > ul > li").mouseout(function(){
+          $(this).find(".submenu").stop().slideUp(200);
+        })
+      })
+    </script>
   </head>
   <body>
     <div id="wrap">
       <aside id="aside">
         <h1></h1>
-        <nav></nav>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">메뉴1</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+                <li><a href="#">서브메뉴2-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+                <li><a href="#">서브메뉴3-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+                <li><a href="#">서브메뉴4-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </aside>
       <!-- //aside -->
       <main id="main">
