@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>은빛억새축제</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery-1.12.3.js"></script>
-  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="script/jquery-1.12.3.js"></script>
+  <script src="script/main.js"></script>
 </head>
 <body>
   <div id="wrap">
-    <header>
-      <h1 class="logo">
-        <!-- <a href="#"><img src="" alt="은빛억새축제 로고"></a> -->
-        은빛억새축제
-      </h1>
+    <header id="header">
+      <h1 class="logo"><a href="#">Header Logo Img</a></h1>
       <nav>
         <ul>
           <li>
@@ -54,82 +51,86 @@
     </header>
     <article id="slider">
       <div class="sliderWrap">
-          <div class="slider">
-            <img src="images/img1.jpg" alt="은빛 억새 1">
-              <span>은빛 억새 1</span>
-          </div>
-          <div class="slider">
+        <div class="slider s1">
+          <a href="#">
+              <img src="images/img1.jpg" alt="은빛 억새 1">
+              <h2>은빛 억새 1</h2>
+          </a>
+        </div>
+        <div class="slider s2">
+          <a href="#">
             <img src="images/img2.jpg" alt="은빛 억새 2">
-              <span>은빛 억새 2</span>
-          </div>
-          <div class="slider">
+            <h2>은빛 억새 2</h2>
+          </a>
+        </div>
+        <div class="slider s3">
+          <a href="#">
             <img src="images/img3.jpg" alt="은빛 억새 3">
-              <span>은빛 억새 3</span>
-          </div>
+            <h2>은빛 억새 3</h2>
+          </a>
+        </div>
       </div>
     </article>
-    <main>
-      <!-- <section class="info">
-        <h2 class="tab-menu">
-          <a href="#" class="active">공지사항</a>
+    <main id="contents">
+      <section class="info">
+        <h3 class="info-menu">
+          <a href="#" class="active">공지사항</a> | 
           <a href="#">갤러리</a>
-        </h2>
-        <div class="notice">
-          <ul>
-            <li>
-              <a href="" class="popup-btn">Vallery Festival 공지1</a>
-              <span>2022.03.01</span>
-            </li>
-            <li>
-              <a href="">Vallery Festival 공지2</a>
-              <span>2022.03.01</span>
-            </li>
-            <li>
-              <a href="">Vallery Festival 공지3</a>
-              <span>2022.03.01</span>
-            </li>
-            <li>
-              <a href="">Vallery Festival 공지4</a>
-              <span>2022.03.01</span>
-            </li>
-          </ul>
-        </div>
-        <div class="gallery">
-          <ul>
-            <li><a href="#"><img src="images/gallery1.jpg" alt="갤러리1"></a></li>
-            <li><a href="#"><img src="images/gallery2.jpg" alt="갤러리2"></a></li>
-            <li><a href="#"><img src="images/gallery3.jpg" alt="갤러리3"></a></li>
-          </ul>
+        </h3>
+        <div class="info-content">
+          <div class="notice">
+            <ul>
+              <li>
+                <a href="#" class="popup-btn">은빛 억새 축제 공지1</a>
+                <span>2024.03.01</span>
+              </li>
+              <li>
+                <a href="#">은빛 억새 축제 공지2</a>
+                <span>2024.03.01</span>
+              </li>
+              <li>
+                <a href="#">은빛 억새 축제 공지3</a>
+                <span>2024.03.01</span>
+              </li>
+              <li>
+                <a href="#">은빛 억새 축제 공지4</a>
+                <span>2024.03.01</span>
+              </li>
+            </ul>
+          </div>
+          <div class="gallery">
+            <ul>
+              <li><a href="#"><img src="images/gallery1.jpg" alt="갤러리1"></a></li>
+              <li><a href="#"><img src="images/gallery2.jpg" alt="갤러리2"></a></li>
+              <li><a href="#"><img src="images/gallery3.jpg" alt="갤러리3"></a></li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="banner">
-        <h2><a href="#">배너</a></h2>
+          <h3><a href="#">배너</a></h3>
       </section>
-      <section class="links">
-        <h2><a href="#">바로가기</a></h2>
-      </section> -->
+      <section class="links">        
+          <h3><a href="#">바로가기</a></h3>
+      </section>
     </main>
-    <footer>
-      <!-- <div class="logo">
-        <h4>
-          <a href="#"><img src="" alt="footer logo"></a>
-        </h4>
-      </div>
+    <footer id="footer">
+      <div class="logo"><a href="#">Footer Logo Img</a></div>
       <div class="copyright">COPYRIGHTⓒ by EasyWeb. ALL RIGHTS RESERVED</div>
       <div class="sns">
         <ul>
           <li><a href="#"><img src="images/sns1.png" alt="하단메뉴1"></a></li>
-          <li><a href="#"><img src="images/sns2.png"alt="하단메뉴2"></a></li>
+          <li><a href="#"><img src="images/sns2.png" alt="하단메뉴2"></a></li>
           <li><a href="#"><img src="images/sns3.png" alt="하단메뉴3"></a></li>
         </ul>
-      </div> -->
+      </div>
     </footer>
-    <!-- <div class="popup">
-      <h2>은빛 억새 축제 </h2>
-      <p>가을철 해발 1,118m의 산이 억새꽃으로 덮여 장관을 이루는 광경을 관광객들에게 알리기 위해 만들어진 축제입니다.
+  </div>
+  <div class="popup-view">
+    <h3>은빛 억새 축제</h3>
+    <p>가을철 해발 1,118m의 산이 억새꽃으로 덮여 장관을 이루는 광경을 관광객들에게 알리기 위해 만들어진 축제입니다.
 산신제, 가요제, 축하공연, 불꽃놀이 등 많은 참여를 바랍니다.</p>
-      <div class="close" >닫기</div>
-    </div> -->
+    <a href="#" class="popup-close">닫기</a>
   </div>
 </body>
 </html>
