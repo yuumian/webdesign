@@ -30,7 +30,7 @@ h3 {
 #aside .logo{
   width: 100%;
   height: 100px;
-  padding: 20px;
+  padding-top: 20px;
   box-sizing: border-box;
 }
 #aside .nav{
@@ -170,7 +170,7 @@ h3 {
 #footer .logo{
   width: 200px;
   height: 100px;
-  padding: 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
 }
 #footer .container{

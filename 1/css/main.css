@@ -27,10 +27,8 @@ img {
 #header .logo {
   height: 100px;
   width: 200px;
-  padding: 10px;
-}
-#header .logo a {
-  display: inline-block;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 #header nav {
   height: 100px;
@@ -191,10 +189,8 @@ nav > ul > li > ul > li > a:hover {
 #footer .logo {
   width: 200px;
   height: 100px;
-  padding: 10px;
-}
-#footer .logo a{
-  display: inline-block;
+  padding: 20px 20px;
+  box-sizing: border-box;
 }
 #footer .copyright {
   width: 800px;
@@ -207,6 +203,7 @@ nav > ul > li > ul > li > a:hover {
   width: 200px;
   height: 100px;
   padding-top: 30px;
+  box-sizing: border-box;
 }
 #footer .sns ul{
   display: flex;
